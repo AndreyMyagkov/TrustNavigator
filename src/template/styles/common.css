@@ -1,0 +1,107 @@
+:root {
+    --font: #323B5A;
+    --blue-dark: #323B5A;
+
+    --blue: #5A7197;
+    --blue-light: #E7FBFF;
+
+    --font-family: 'Open Sans', Arial sans-serif;
+}
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans/open-sans-v27-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans/open-sans-v27-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans/open-sans-v27-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans/open-sans-v27-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans/open-sans-v27-latin-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans/open-sans-v27-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/open-sans/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/open-sans/open-sans-v27-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/open-sans/open-sans-v27-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/open-sans/open-sans-v27-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/open-sans/open-sans-v27-latin-700.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    font-family: 'Open Sans', Arial sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--font);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* a:visited,
+ a:hover*/
+a {
+    color: var(--font)
+}
+
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    /* margin-right: 10px; */
+}
+
+svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.main  {
+    flex: 1 1 auto
+}
+
+.content {
+
+}
+
+@media (min-width: 576px) {
+    /* .aside {
+        order: 1;
+    }
+    .content {
+        order: 2;
+    } */
+}
+
+
+.rounded {
+    border-radius: 2px;
+}
+

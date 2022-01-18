@@ -40,7 +40,7 @@ function browsersync() {
 
 
 function svgSpriteBuild() {	
-	return src('src/template/svg/src/*.svg')
+	return src('src/template/svg/icons/*.svg')
 		.pipe(plumber())
 		// remove all fill, style and stroke declarations in out shapes
 		// .pipe(cheerio({
@@ -59,7 +59,7 @@ function svgSpriteBuild() {
 				mode: {
 					symbol: {
 						dest: "../svg/",
-						sprite: 'sprite5.svg',
+						sprite: 'sprite.svg',
 						prefix: ".icon-%s",
 						dimensions: false,
 						inline: true,
@@ -129,7 +129,7 @@ function styles_old() {
 }
 
 function styles() {
-	return src([`src/template/styles/main.css`])
+	return src([`src/template/styles/_main.css`])
 		.pipe(plumber())
 		.pipe(sourcemaps.init({ largeFile: true }))
 		.pipe(sourcemaps.identityMap())
@@ -139,45 +139,13 @@ function styles() {
 			cascade: false
 		}))
 
-		.pipe(rename({ suffix: '.min' }))
+		.pipe(rename({ basename: "style", suffix: '.min' }))
 		.pipe(sourcemaps.write('../css/'))
-		//.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
 		.pipe(dest('src/template/css'))
 		.pipe(browserSync.stream())
 }
-function stylesSCSS() {
-	return src([`src/template/styles/${preprocessor}/*.*`, `!src/template/styles/${preprocessor}/_*.*`])
-		.pipe(plumber())
-		/*.pipe(gulpStylelint({
-			failAfterError: false,
-			reporters: [
-				{
-					formatter: 'string',
-					console: true
-				}
-			]
-		}))*/
 
-		.pipe(sourcemaps.init({ largeFile: true }))
-		.pipe(sourcemaps.identityMap())
-		//.pipe(eval(`${preprocessor}glob`)())
-		.pipe(sass())
-		.pipe(autoprefixer({
-			cascade: false
-		}))
-		//.pipe(shorthand())
-		// .pipe(cleancss({
-		// 	debug: true,
-		// 	compatibility: '*'
-		// }, details => {
-		// 	console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
-		// }))
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write('../css/'))
-		//.pipe(sourcemaps.write())
-		.pipe(dest('src/template/css'))
-		.pipe(browserSync.stream())
-}
 
 function images_old() {
 	return src(['src/template/img/src/**/*'])
@@ -268,7 +236,7 @@ function deploy() {
 }
 
 function startwatch() {
-	watch(`src/template/styles/**/*`, { usePolling: true }, styles)
+	watch(`src/template/styles/*`, { usePolling: true }, styles)
 	watch(['src/template/js/**/*.js', '!src/template/js/**/*.min.js'], { usePolling: true }, jsSimple)
 	watch('src/template/img/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	//watch('src/template/svg/**/*.{svg}', { usePolling: true }, images)
