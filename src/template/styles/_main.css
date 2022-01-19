@@ -5,13 +5,14 @@
 
 /*@import "typografy.css";*/
 
-/*@import "form.css";*/
+@import "form.css";
 
 /*@import "pagination.css";*/
 
 
 /* Pages */
 /*@import "index.css";*/
+@import "categories.css";
 
 /*@import "404.css";*/
 

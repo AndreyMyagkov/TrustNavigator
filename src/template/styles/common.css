@@ -46,6 +46,9 @@
         url('../fonts/open-sans/open-sans-v27-latin-700.svg#OpenSans') format('svg');
     /* Legacy iOS */
 }
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Open Sans', Arial sans-serif;
@@ -57,6 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url(../img/bg-main.jpg);
 }
 
 /* a:visited,
@@ -84,7 +89,7 @@ svg {
 }
 
 .main  {
-    flex: 1 1 auto
+    flex: 1 1 auto;
 }
 
 .content {
@@ -92,16 +97,41 @@ svg {
 }
 
 @media (min-width: 576px) {
-    /* .aside {
+    .aside {
         order: 1;
     }
     .content {
         order: 2;
-    } */
+    }
 }
 
 
 .rounded {
     border-radius: 2px;
 }
+.gap-20 {
+    gap:20px;
+}
 
+.row-columns {
+    padding: 20px 0 50px 0;
+    gap: 20px;
+}
+.aside {
+    flex: 0 0 31.4%;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 30px 20px;
+}
+.content {
+    flex: 1 1%;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.aside__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 24px;
+}
