@@ -4,3 +4,83 @@
 :-ms-input-placeholder {
     color: #666;
 }
+
+
+.custom-control {
+    cursor: pointer;
+    position: relative;
+    padding-left: 26px;
+}
+
+.custom-control__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    display: none;
+}
+
+.custom-control__checkbox {
+    height: 16px;
+    width: 16px;
+    border: solid 1px var(--blue);
+    display: inline-block;
+    border-radius: 2px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.custom-control__input:checked+.custom-control__checkbox {
+    border-color: var(--blue);
+    background: var(--blue);
+}
+
+.custom-control__input:checked+.custom-control__checkbox:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 9px;
+    border: solid 2px #fff;
+    border-width: 0 2px 2px 0;
+    position: relative;
+    left: 4px;
+    top: 1px;
+    transform: rotate(45deg);
+}
+
+.custom-control__radio {
+    height: 16px;
+    width: 16px;
+    border: solid 1px var(--blue);
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.custom-control__input:checked+.custom-control__radio:after {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    position: relative;
+    left: 3px;
+    top: 3px;
+}
+
+.custom-control__input:checked+.custom-control__radio:after {
+    display: block;
+}
+
+.custom-control__label {
+    line-height: 1.5em;
+}

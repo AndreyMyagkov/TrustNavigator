@@ -5,6 +5,16 @@
     --blue: #5A7197;
     --blue-light: #E7FBFF;
 
+    --rating-10: #FF4B55;
+    --rating-15: #FF4B55;
+    --rating-20: #FF9900;
+    --rating-25: #FF9900;
+    --rating-30: #FFD414;
+    --rating-35: #FFD414;
+    --rating-40: #0AE59C;
+    --rating-45: #0AE59C;
+    --rating-50: #00B67A;
+
     --font-family: 'Open Sans', Arial sans-serif;
 }
 /* open-sans-regular - latin */
@@ -62,6 +72,7 @@ body {
     min-height: 100%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
         url(../img/bg-main.jpg);
+    background-attachment: fixed;
 }
 
 /* a:visited,
@@ -73,19 +84,12 @@ a {
 
 .icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    /* margin-right: 10px; */
-}
-
-svg {
-    display: inline-block;
     width: 1em;
     height: 1em;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+    /* margin-right: 10px; */
 }
 
 .main  {
