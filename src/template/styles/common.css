@@ -83,7 +83,9 @@ body {
 a {
     color: var(--font)
 }
-
+a:hover {
+    text-decoration: underline;
+}
 
 .icon {
     display: inline-block;

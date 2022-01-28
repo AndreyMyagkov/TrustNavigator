@@ -153,46 +153,7 @@
     margin-bottom: 9px;
 }
 
-.stars {
-    display: inline-block;
-    margin-right: 1em;
-    color:#C4C4C4;
-}
-.stars__star {
-    stroke-width: 1px;
-}
-.stars__star-outline {
-    color:#C4C4C4;
-    stroke-width: 1px;
-    fill:none;
-}
-.stars_50 {
-    color: var(--rating-50);
-}
-.stars_45 {
-    color: var(--rating-45);
-}
-.stars_40 {
-    color: var(--rating-40);
-}
-.stars_35 {
-    color: var(--rating-35);
-}
-.stars_30 {
-    color: var(--rating-30);
-}
-.stars_25 {
-    color: var(--rating-25);
-}
-.stars_20 {
-    color: var(--rating-20);
-}
-.stars_15 {
-    color: var(--rating-15);
-}
-.stars_10 {
-    color: var(--rating-10);
-}
+
 
 
 .rewiews__rating-info {

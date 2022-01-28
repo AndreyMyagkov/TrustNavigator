@@ -87,6 +87,9 @@
     border-radius: 6px;
     margin-bottom: 20px;
 }
+.explore-categories__item:hover {
+    text-decoration: none;
+}
 .explore-categories__item-wr {
     transform: skewX(-23deg);
 }
