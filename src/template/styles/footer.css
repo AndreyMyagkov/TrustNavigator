@@ -59,6 +59,10 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-middle a:hover {
+    color: #fff;
+}
+
 .footer-middle__col-1 {
     padding: 0 12px 20px;
     position: relative;

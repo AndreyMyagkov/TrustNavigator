@@ -1,0 +1,326 @@
+.search-main {
+    background: #dcdfd6 url('../img/bg-main-search.jpg') top center no-repeat;
+    height: 500px;
+}
+.search-main .container {
+    height: 100%;
+}
+.search-main__wr {
+    max-width: 562px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-main__header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.35em;
+    margin-bottom: 20px;
+}
+
+.search-main__text {
+    font-size: 20px;
+    line-height: 1.2em;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.search-main__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.search-main__input {
+    flex: 1;
+}
+
+.search-main__submit {
+    height: 64px;
+    border: none;
+    padding: 0 20px;
+}
+
+.explore-categories {
+    padding: 34px 0 50px;
+}
+
+.explore-categories__top {
+     
+}
+
+.explore-categories__header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.explore-categories__all {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--blue);
+    float: right;
+    text-decoration: none;
+}
+
+.explore-categories__list {
+    display: flex;
+    gap: 20px;
+}
+
+.explore-categories__slide {
+    max-width: 25%;
+    flex: 1
+}
+.explore-categories__item {
+    background: #fff url('../img/bg-explore-categories__item.jpg') left top no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 13px 30px;
+    display: block;
+    text-decoration: none;
+    transform: skewX(23deg);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.explore-categories__item-wr {
+    transform: skewX(-23deg);
+}
+.explore-categories__item:nth-child(2n+1) {
+    transform: skewX(-23deg);
+}
+.explore-categories__item:nth-child(2n+1) .explore-categories__item-wr {
+    transform: skewX(23deg);
+}
+
+.explore-categories__icon {
+    color: var(--blue);
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.explore-categories__title {
+    font-size: 16px;
+    line-height: 1.375em ;
+    color: #333333;
+}
+
+ 
+.reviews-recent {
+    margin-bottom: 150px;
+}
+
+.reviews-recent__header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.reviews-recent__list {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 650px; */
+    margin-bottom: 20px;
+}
+
+.reviews-recent__item {
+    background: #fff;
+    border-left: solid 10px transparent;
+    border-radius: 0 6px 6px 0;
+    padding: 20px 20px 17px 15px;
+    margin-bottom: 20px;
+}
+
+.reviews-recent__item.rating_50 {
+    border-color: var(--rating-50);
+}
+.reviews-recent__item.rating_45 {
+    border-color: var(--rating-45);
+}
+.reviews-recent__item.rating_40 {
+    border-color: var(--rating-40);
+}
+.reviews-recent__item.rating_35 {
+    border-color: var(--rating-35);
+}
+.reviews-recent__item.rating_30 {
+    border-color: var(--rating-30);
+}
+.reviews-recent__item.rating_25 {
+    border-color: var(--rating-25);
+}
+.reviews-recent__item.rating_20 {
+    border-color: var(--rating-20);
+}
+.reviews-recent__item.rating_15 {
+    border-color: var(--rating-15);
+}
+.reviews-recent__item.rating_10 {
+    border-color: var(--rating-10);
+}
+
+
+.reviews-recent__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;     
+}
+
+.reviews-recent__ava {
+    border-radius: 50%;
+    width:45px;
+    height: 45px;
+}
+
+
+.reviews-recent__stars {
+    font-size: 20px;
+}
+
+.reviews-recent__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.reviews-recent__text {
+    font-size: 14px;
+    line-height: 1.71em;
+    color: #333333;
+}
+
+.reviews-recent__footer {
+    text-align: center;
+}
+
+.reviews-recent__all {}
+
+
+
+.be-heard {
+    background: #5CAEBB url(../img/bg-be-heard.jpg) center top repeat-y;
+    margin-bottom: 50px;
+}
+
+.be-heard__col-1 {
+    padding: 58px 0;
+    color: var(--font);
+}
+
+.be-heard__header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.35em; 
+    margin-bottom: 30px;
+}
+
+.be-heard__text {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+.be-heard__btn {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: currentColor;
+    border-color: currentColor;
+}
+
+.be-heard__col-2 {
+    position: relative;
+    top: -50px;
+    color: #fff;
+    background: #000 url(../img/bg-be-heard__protected.jpg) center top no-repeat;
+    padding: 40px 67px 30px 40px;
+    border-radius: 6px;
+}
+
+
+ .your-stories {
+    margin-bottom: 100px;
+ }
+
+.your-stories__header {
+    font-size: 20px;
+    line-height: 1.2em;
+    text-align: center;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.your-stories__subheader {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.35em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.your-stories__item {
+    background: #C7C3C0 url(../img/bg-your-stories.jpg) center top no-repeat;
+    border-radius: 6px;
+}
+
+.your-stories__col-1 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    background: #F9FCFD url(../img/bg-your-stories__info.jpg) center top no-repeat;
+    padding: 40px 35px 50px;
+    border-radius: 6px;
+
+
+}
+
+.your-stories__stars {
+    margin-right: 0;
+    font-size: 40px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.your-stories__text {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.35em;
+    text-align: center;
+    padding: 62px 0;
+    position: relative;
+}
+.your-stories__text:before {
+    content: '';
+    display: block;
+    border-top: solid 1px var(--blue);
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    right: 40px;
+}
+.your-stories__text:after {
+    content: '';
+    display: block;
+    border-top: solid 1px var(--blue);
+    position: absolute;
+    bottom: 18px;
+    left: 40px;
+    right: 40px;
+}
+.your-stories__subtext {
+    font-size: 20px;
+    line-height: 1.35em;
+    text-align: center;
+}

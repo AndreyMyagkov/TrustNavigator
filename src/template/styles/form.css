@@ -35,6 +35,9 @@ button {
     border-radius: 2px;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+a.btn {
+    text-decoration: none;
+}
 .btn-rounded {
     border-radius: 50px;
 }

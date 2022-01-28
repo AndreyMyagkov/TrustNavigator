@@ -7,15 +7,13 @@
 
 @import "form.css";
 
-/*@import "pagination.css";*/
-
 
 /* Pages */
-/*@import "index.css";*/
+@import "index.css";
 @import "categories.css";
 @import "category.css";
 
 /*@import "404.css";*/
-
+/*@import "pagination.css";*/
 @import "footer.css";
 /*@import "modal.css";*/
