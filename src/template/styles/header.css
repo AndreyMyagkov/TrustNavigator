@@ -79,6 +79,9 @@
 .nav-main__item.current > .nav-main__link,
 .nav-main__item.current>.nav-main__icon {
     color: var(--base);
+}
+
+.nav-main__item:hover>.nav-main__link {
     text-decoration: underline;
 }
 

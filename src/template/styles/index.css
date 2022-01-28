@@ -188,12 +188,15 @@
     font-size: 20px;
 }
 
-.reviews-recent__title {
-    font-weight: bold;
+.reviews-recent__author {
     font-size: 16px;
     line-height: 1.5em;
     color: var(--blue);
     margin-bottom: 10px;
+}
+.reviews-recent__link {
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .reviews-recent__text {
@@ -206,7 +209,9 @@
     text-align: center;
 }
 
-.reviews-recent__all {}
+.reviews-recent__all {
+    min-width: 174px;
+}
 
 
 
@@ -235,10 +240,17 @@
 
 .be-heard__btn {
     font-weight: bold;
-    font-size: 16px;
-    line-height: 1.5em;
     color: currentColor;
-    border-color: currentColor;
+    border: 1px solid currentColor;
+    padding: 0.5rem 1rem;
+    min-width: 174px;
+    background-color: transparent;
+}
+.be-heard__btn:hover {
+   background: rgba(90, 113, 151, 0.1);
+}
+.be-heard__col-2 .be-heard__btn:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .be-heard__col-2 {
@@ -272,20 +284,24 @@
 }
 
 .your-stories__item {
-    background: #C7C3C0 url(../img/bg-your-stories.jpg) center top no-repeat;
+    background: #C7C3C0;
     border-radius: 6px;
+    position: relative;
 }
 
-.your-stories__col-1 {
-    position: relative;
+.your-stories__figcaption {
+    position: absolute;
     top: 50px;
     left: 50px;
     width: 500px;
+    height:500px;
     background: #F9FCFD url(../img/bg-your-stories__info.jpg) center top no-repeat;
     padding: 40px 35px 50px;
     border-radius: 6px;
-
-
+}
+.your-stories__img {
+    border-radius: 6px;
+    display: block;
 }
 
 .your-stories__stars {
@@ -322,7 +338,7 @@
     left: 40px;
     right: 40px;
 }
-.your-stories__subtext {
+.your-stories__author {
     font-size: 20px;
     line-height: 1.35em;
     text-align: center;
