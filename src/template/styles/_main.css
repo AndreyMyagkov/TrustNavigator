@@ -2,6 +2,7 @@
 @import "bootstrap-grid.css";
 @import "common.css";
 @import "header.css";
+@import "breadcrumbs.css";
 
 /*@import "typografy.css";*/
 
@@ -12,8 +13,9 @@
 @import "index.css";
 @import "categories.css";
 @import "category.css";
+@import "company.css";
 
 /*@import "404.css";*/
-/*@import "pagination.css";*/
+@import "pagination.css";
 @import "footer.css";
 /*@import "modal.css";*/

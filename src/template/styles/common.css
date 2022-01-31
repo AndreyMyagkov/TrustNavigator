@@ -4,6 +4,7 @@
 
     --blue: #5A7197;
     --blue-light: #E7FBFF;
+    --blue-vivid: #0060FF;
 
     --rating-10: #FF4B55;
     --rating-15: #FF4B55;
@@ -81,7 +82,8 @@ body {
 /* a:visited,
  a:hover*/
 a {
-    color: var(--font)
+    color: var(--font);
+    text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
@@ -244,3 +246,18 @@ a:hover {
     color: var(--rating-10);
 }
 /* STARS */
+
+
+.meter {
+    background-color: #EBEDF1;
+    height: 10px;
+    border-radius: 1px;
+    position: relative;
+}
+
+.meter__value {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+}

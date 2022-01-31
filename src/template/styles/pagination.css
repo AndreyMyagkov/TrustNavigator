@@ -1,0 +1,39 @@
+/* pagination */
+.pagination {
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 5px 3px;
+    background: #FFFFFF;
+    border-radius: 2px;
+}
+
+.pagination li a,
+.pagination li span {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--font);
+    padding: 2px 7px;
+    text-decoration: none;
+    display: block;
+    min-width: 20px;
+}
+
+.pagination li.active,
+.pagination  li.pagination__next {
+    background: var(--rating-20);
+    color: #fff;
+}
+
+.pagination li.active *,
+.pagination  li.pagination__next * {
+    color: #fff;
+}
+
+.pagination li:hover:not(.active) * {
+
+}
+
+/* /pagination */
