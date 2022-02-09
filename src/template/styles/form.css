@@ -41,6 +41,15 @@ a.btn {
 .btn-rounded {
     border-radius: 50px;
 }
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+.btn-icon .icon {
+    font-size: 0.875em;
+}
 .btn-primary {
     color: #fff;
     background-color: var(--rating-20);

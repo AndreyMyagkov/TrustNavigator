@@ -108,10 +108,10 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-    .aside {
+    .layout-aside-content .aside {
         order: 1;
     }
-    .content {
+    .layout-aside-content .content {
         order: 2;
     }
 }
@@ -123,16 +123,23 @@ a:hover {
 .gap-20 {
     gap:20px;
 }
+.d-flex {
+    display: flex;
+}
 
 .row-columns {
+    display: flex;
     padding: 20px 0 50px 0;
     gap: 20px;
 }
 .aside {
     flex: 0 0 31.4%;
+    
+}
+.aside_white {
     background-color: #fff;
-    border-radius: 2px;
     padding: 30px 20px;
+    border-radius: 2px;
 }
 .content {
     flex: 1 1%;
@@ -147,10 +154,58 @@ a:hover {
     margin-bottom: 24px;
 }
 
+
+.bg-1 {
+    background-color: var(--rating-10);
+}
+
+.bg-2 {
+    background-color: var(--rating-20);
+}
+
+.bg-3 {
+    background-color: var(--rating-30);
+}
+
+.bg-4 {
+    background-color: var(--rating-40);
+}
+
+.bg-5 {
+    background-color: var(--rating-50);
+}
+.bg-white {
+    background-color: #fff;
+}
+
+.color-1 {
+    color: var(--rating-10);
+}
+
+.color-2 {
+    color: var(--rating-20);
+}
+
+.color-3 {
+    color: var(--rating-30);
+}
+
+.color-4 {
+    color: var(--rating-40);
+}
+
+.color-5 {
+    color: var(--rating-50);
+}
+
+.color-white {
+    color: #fff;
+}
+
 /* STARS */
 .stars {
     display: inline-block;
-    margin-right: 1em;
+    /* margin-right: 1em; */
     color: #C4C4C4;
 }
 
@@ -256,8 +311,12 @@ a:hover {
 }
 
 .meter__value {
-    position: absolute;
-    top:0;
-    left:0;
-    bottom: 0;
+    height: 10px;
+}
+
+.u-content p {
+    margin-bottom: 1em;
+}
+.u-content a {
+    color: var(--blue-vivid)
 }
