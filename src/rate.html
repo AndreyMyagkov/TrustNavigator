@@ -1,0 +1,206 @@
+<!--#set var="title" value="Rate your recent experience" -->
+<!--#include virtual="/parts/header.html" -->
+    
+<main class="main">
+    <!-- rate-header -->
+    <div class="page-top">
+        <div class="container-small">
+
+            <div class="rate-header">
+                <div class="rate-header__logo">
+                    <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/596fa0650000ff0005a7016a/0x0.png"
+                        alt="DogWatch" widyh="100" height="100"
+                        class="rate-header__img">
+                </div>
+                <div class="rate-header__info">
+                    <h3 class="rate-header__header">DogWatch Hidden Fences</h3>
+                    <div class="rate-header__url">dogwatch.com</div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- /rate-header -->
+
+    <div class="container-small">
+
+        <form action="">
+            <div class="company-block rate__top">
+                <h1 class="rate__label">Rate your recent experience</h1>
+                <div class="rate__star-selector">
+                    <div class="stars rating_50">
+                        <svg class="icon stars__star" width="20" height="20">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="icon stars__star" width="20" height="20">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="icon stars__star" width="20" height="20">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="icon stars__star" width="20" height="20">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="icon stars__star" width="20" height="20">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="company-block">
+
+                <label for="" class="rate__label">Tell us about your experience</label>
+                <div class="rate__external">
+                    <a href="" class="rate__link">Read our Guidelines for Reviewers</a>
+                </div>
+                <textarea name="text" class="form-control rate__textarea"
+                    placeholder="This is where you write your review. Explain what happened, and leave out offensive words. Keep your feedback honest, helpful, and constructive."></textarea>
+
+                <div class="rate__external">
+                    <a href="" class="rate__link">How to write a useful review</a>
+                </div>
+
+                <label for="" class="rate__label">Give your review a title</label>
+
+                <div class="rate-rewiew-title">
+                    <input type="text" class="form-control rate-rewiew-title__control">
+                    <i class="rate-rewiew-title__icon">
+                        <svg class="icon" width="20" height="20">
+                            <use xlink:href="#pencil"></use>
+                        </svg>
+                    </i>
+                </div>
+
+                <label for="" class="rate__label">Which DogWatch Hidden Fences location do you want to review?</label>
+
+                <div class="rate-locations">
+
+                    <div class="rate-locations__item">
+                        <label class="custom-control">
+                            <input type="radio" value="2" name="location" class="custom-control__input" checked>
+                            <span class="custom-control__radio"></span>
+                            <span class="custom-control__label">
+                                <span class="rate-locations__title">No specific location</span>
+
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="rate-locations__item">
+                        <label class="custom-control">
+                            <input type="radio" value="1" name="location" class="custom-control__input">
+                            <span class="custom-control__radio"></span>
+                            <span class="custom-control__label">
+                                <span class="rate-locations__title">DogWatch Hidden Fences - Greater Bangor</span>
+                                <span class="rate-locations__locaton">
+                                    <svg class="icon" width="20" height="20">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    36 Bishop Dr, 04401 Hermon, ME, US
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <div class="rate-locations__item">
+                        <label class="custom-control">
+                            <input type="radio" value="3" name="location" class="custom-control__input">
+                            <span class="custom-control__radio"></span>
+                            <span class="custom-control__label">
+                                <span class="rate-locations__title">DogWatch Hidden Fences - Palmetto</span>
+                                <span class="rate-locations__locaton">
+                                    <svg class="icon" width="20" height="20">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    215 Old Cedar Point, 29036 Chapin, SC, US
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="rate-locations__more">
+                    See more locations
+                </div>
+
+
+                <label class="custom-control rate-confirm">
+                    <input type="checkbox" value="1" name="confirm" class="custom-control__input">
+                    <span class="custom-control__checkbox"></span>
+                    <span class="custom-control__label">
+                         I confirm this review is about my own genuine experience. I am eligible to leave this review,
+                         and have
+                         not been offered any incentive or payment to leave a review for this company.
+                    </span>
+                </label>
+               
+
+
+            </div>
+
+        </form>
+
+
+
+        <div class="company-block login-select">
+            <div class="login-select__wr">
+                <h2 class="login-select__header">Verify to post your review</h2>
+                <button class="btn btn-primary login-select__btn">
+                    Continue with Facebook
+                    <i class="login-select__icon">
+                        <img src="/template/svg/Facebook.svg" alt="facebook" loading="lazy">
+                    </i>
+                </button>
+
+                <button class="btn btn-primary login-select__btn">
+                    Continue with Google
+                    <i class="login-select__icon">
+                         <img src="/template/svg/google.svg" alt="Google" loading="lazy">
+                    </i>
+                </button>
+
+                <div class="login-select__label">Continue with email</div>
+
+                <input class="form-control login-select__email" name="email" type="email" placeholder="your@email.com">
+
+                <button class="btn btn-primary login-select__auth">Continue with email</button>
+
+                <div class="login-select__text u-content">
+                    By continuing, you agree that we create a Trustpilot account for you (unless already created), and
+                    accept our <a href="">Terms and Conditions and Privacy Policy.</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="company-block accept">
+            <h2 class="accept__header">Verify to post your review</h2>
+            <div class="accept__text u-content">
+                Please accept Trustpilot’s terms & conditions and privacy policy. Once you have accepted them you can
+                use our services.
+            </div>
+
+            
+
+            <label class="custom-control accept-confirm">
+                <input type="checkbox" value="1" name="accept" class="custom-control__input">
+                <span class="custom-control__checkbox"></span>
+                <span class="custom-control__label">
+                    I accept the <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+                </span>
+            </label>
+
+            <button class="btn btn-primary btn-block">Continue</button>
+
+        </div>
+
+
+
+
+    </div>
+</main>
+    
+<!--#include virtual="/parts/footer.html" -->

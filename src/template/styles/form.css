@@ -3,6 +3,7 @@
 ::-moz-placeholder,
 :-ms-input-placeholder {
     color: #666;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
 }
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
@@ -102,9 +103,13 @@ a.btn {
     border: 1px solid #ccc;
     border-radius: 2px;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
 }
 .form-control:focus {
     box-shadow: 0px 0px 4px rgba(153, 153, 153, 0.5);
+}
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
 }
 
 .form-control-primary {
