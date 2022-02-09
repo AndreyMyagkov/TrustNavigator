@@ -1,0 +1,93 @@
+.container-small {
+    max-width: 602px;
+    margin: 0 auto;
+}
+
+.user-header {
+    text-align: center;
+}
+
+.user-header__logo {
+    margin-bottom: 10px;
+}
+
+.user-header__header {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.37em;
+    text-align: center;
+}
+.user-reviews__list {
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+.user-reviews__list .company-review__buttons {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.user-reviews__company {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.user-reviews__company a {
+    color: var(--blue-vivid)
+}
+
+
+.become-verified {
+    color: var(--blue);
+}
+
+.become-verified__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: var(--font)
+}
+
+.become-verified__content {
+
+}
+
+.become-verified__footer {}
+
+
+.committed-to-transparency {
+    background: url(../img/bg-user__commited.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 30px 17px 26px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.committed-to-transparency__header {
+    font-weight: bold;
+}    
+
+.committed-to-transparency__action {
+    display: flex;
+    gap: 15px;
+}
+
+.committed-to-transparency__link {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.committed-to-transparency__icon {
+    font-size: 24px;
+}
+
+.marketing-in {
+    color: var(--blue);
+    margin-bottom: 50px;
+}
+
+.marketing-in__button {}

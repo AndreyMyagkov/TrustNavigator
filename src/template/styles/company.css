@@ -1,7 +1,4 @@
-.page-top {
-    background: #fff;
-    padding: 25px 0;
-}
+
 
 .business-information {
 
@@ -380,13 +377,16 @@
 .company-review-user__location {}
 
 .company-review-user__stars {
-    margin-left: auto;
     font-size: 20px;
+}
+
+.company-review__info .company-review-user__stars {
+    margin-left: auto;
 }
 
 .company-review__content-wr {
     border-bottom: 1px solid #C4C4C4;
-    padding: 20px 0;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
@@ -398,7 +398,7 @@
     line-height: 22px;
     padding-bottom: 20px;
     color: var(--blue);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #C4C4C4;
 }
 
@@ -432,6 +432,7 @@
 .company-review__actions {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 .company-review__button {

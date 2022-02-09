@@ -13,7 +13,8 @@ const cssimport = require("gulp-cssimport");
 const cleancss     = require('gulp-clean-css')
 const autoprefixer = require('gulp-autoprefixer')
 const rename       = require('gulp-rename')
-const imagemin     = require('gulp-imagemin')
+const imagemin     = require('gulp-imagemin');
+//import imagemin from 'gulp-imagemin';
 const newer        = require('gulp-newer')
 const rsync        = require('gulp-rsync')
 const del          = require('del')
@@ -155,23 +156,26 @@ function images_old() {
 		.pipe(browserSync.stream())
 }
 
+const imageminConfig = 
+	[
+		imagemin.gifsicle({ interlaced: true }),
+		imagemin.mozjpeg({
+			quality: 85,
+			progressive: true
+		}),
+		imagemin.optipng({ optimizationLevel: 5 }),
+		imagemin.svgo({
+			plugins: [
+				{ removeViewBox: true },
+				{ cleanupIDs: false }
+			]
+		})
+	];
+
 function images() {
 	return src('src/template/img/**/*.{gif,png,jpg,svg,webp}')
 		.pipe(newer('dist/template/img'))
-		.pipe(imagemin([
-			imagemin.gifsicle({ interlaced: true }),
-			imagemin.mozjpeg({
-				quality: 85,
-				progressive: true
-			}),
-			imagemin.optipng({ optimizationLevel: 5 }),
-			imagemin.svgo({
-				plugins: [
-					{ removeViewBox: true },
-					{ cleanupIDs: false }
-				]
-			})
-		]))
+		.pipe(imagemin())
 		.pipe(dest('dist/template/img'))
 		.pipe(browserSync.stream())
 }

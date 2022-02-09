@@ -126,6 +126,12 @@ a:hover {
 .d-flex {
     display: flex;
 }
+.float-right {
+    float: right;
+}
+img.float-right {
+    margin: 0 0 1em 1em;
+}
 
 .row-columns {
     display: flex;
@@ -152,6 +158,12 @@ a:hover {
     font-size: 18px;
     line-height: 1.5em;
     margin-bottom: 24px;
+}
+
+.page-top {
+    background: #fff;
+    padding: 25px 0;
+    margin-bottom: 20px;
 }
 
 
@@ -314,9 +326,3 @@ a:hover {
     height: 10px;
 }
 
-.u-content p {
-    margin-bottom: 1em;
-}
-.u-content a {
-    color: var(--blue-vivid)
-}

@@ -50,6 +50,10 @@ a.btn {
 .btn-icon .icon {
     font-size: 0.875em;
 }
+.btn-block {
+    display: block;
+    width: 100%;
+}
 .btn-primary {
     color: #fff;
     background-color: var(--rating-20);

@@ -1,0 +1,25 @@
+/* TODO: */
+.u-content {
+    margin-bottom: 34px;
+}
+
+.u-content h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.u-content p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.u-content p {
+}
+
+.u-content a {
+    color: var(--blue-vivid)
+}

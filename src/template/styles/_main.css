@@ -4,7 +4,7 @@
 @import "header.css";
 @import "breadcrumbs.css";
 
-/*@import "typografy.css";*/
+@import "typografy.css";
 
 @import "form.css";
 
@@ -14,6 +14,7 @@
 @import "categories.css";
 @import "category.css";
 @import "company.css";
+@import "user.css";
 
 /*@import "404.css";*/
 @import "pagination.css";
