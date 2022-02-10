@@ -19,23 +19,20 @@
 .search-categories__form {
     position: relative;
     background: #fff;
-    border: 1px solid #FF9900;
-    border-radius: 2px;
-    display: flex;
 }
 
 .search-categories__input {
-    flex: 1;
-    border:none;
     margin: 0;
     height: 64px;
-    padding: 0 1em;
+    padding: 0 80px 0 1em;
     font-size: 16px;
     color: #666;
 }
 
 .search-categories__submit {
-    flex:  0 0 64px;
+    width: 62px;
+    height: 62px;
+    display: flex;
     margin: 0;
     padding: 0;
     border: none;
@@ -44,6 +41,9 @@
     display: grid;
     place-content: center;
     cursor: pointer;
+    position: absolute;
+    top:1px;
+    right:1px;
 }
 .search-categories__icon-loupe {
     font-size: 24px;
