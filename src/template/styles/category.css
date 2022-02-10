@@ -57,6 +57,13 @@
     text-decoration: none;
 }
 
+.popular-subs__item.active,
+.popular-subs__item:hover {
+    color: #fff;
+    background-color: var(--rating-20);
+    text-decoration: none;
+}
+
 
 
 .rewiews__list {
@@ -70,6 +77,9 @@
     text-decoration: none;
     display: block;
     margin-bottom: 20px;
+}
+.rewiews__item:hover {
+    text-decoration: none;
 }
 
 .rewiews__rating_50 {
@@ -132,6 +142,10 @@
     font-size: 18px;
     line-height: 1.333em;
     margin-bottom: 10px;
+}
+.rewiews__title:hover {
+    text-decoration: underline;
+    color: var(--blue-vivid);
 }
 
 .rewiews__rating {
@@ -248,23 +262,12 @@
 }
 
 .filter-as__input {
-    background: #FFFFFF;
-    padding: 0 0.5em;
-    height: 40px;
     flex: 1;
     border: none;
 }
 
 .filter-as__apply {
-    font-size: 16px;
-    line-height: 1.5em;
-    border:none;
-    margin: 0;
-    padding: 0;
-    background: #FF9900;
-    cursor: pointer;
-    color: #fff;
-    flex: 0 0 72px;
+    border-radius: 0;
 }
 
 .filter-as__list {
