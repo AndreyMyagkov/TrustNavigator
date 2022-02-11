@@ -8,12 +8,11 @@
 
 .user-header__header {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.37em;
     text-align: center;
 }
 .user-reviews__list {
-    padding-top: 30px;
     margin-bottom: 40px;
 }
 .user-reviews__list .company-review__buttons {
@@ -51,12 +50,8 @@
 
 
 .committed-to-transparency {
-    background: url(../img/bg-user__commited.jpg) center center no-repeat;
     background-size: cover;
     padding: 30px 17px 26px 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: var(--blue);
     font-size: 18px;
     line-height: 24px;
@@ -64,6 +59,7 @@
 
 .committed-to-transparency__header {
     font-weight: bold;
+    margin-bottom: 12px;
 }    
 
 .committed-to-transparency__action {
@@ -86,3 +82,24 @@
 }
 
 .marketing-in__button {}
+
+@media screen and (min-width: 768px) {
+    .user-header__header {
+        font-size: 30px;
+    }
+    .user-reviews__list {
+        padding-top: 30px;
+    }
+    .committed-to-transparency {
+        background: url(../img/bg-user__commited.jpg) center center no-repeat;
+    }
+    .committed-to-transparency {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .committed-to-transparency__header {
+        margin-bottom: 0;
+    }
+}
