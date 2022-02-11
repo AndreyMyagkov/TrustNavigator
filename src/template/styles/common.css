@@ -325,3 +325,25 @@ img.float-right {
     height: 10px;
 }
 
+
+.display-desctop {
+    display: none;
+}
+.display-mobile {
+    display: block;
+}
+
+.container-small {
+    max-width: 602px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .display-desctop {
+        display: block;
+    }
+    .display-mobile {
+        display: none;
+    }
+}

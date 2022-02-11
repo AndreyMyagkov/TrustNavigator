@@ -4,13 +4,27 @@
 <main class="main">
     
     <div class="container">
+        <div class="display-mobile text-page__mobilenav">
+            <select class="form-control form-control-lg" onchange="window.location.href = this.options[this.selectedIndex].value">
+                <optgroup label="For Reviewers">
+                    <option value="#">Guidelines for Reviewers</option>
+                    <option value="#">Privacy Policy</option>
+                    <option value="#">Terms and Conditions</option>
+                </optgroup>
+                <optgroup label="For Businesses">
+                    <option value="#">Guidelines for Businesses</option>
+                    <option value="#">Data Processing Agreement</option>
+                    <option value="#">Subprocessors</option>
+                </optgroup>
+            </select>
+        </div>
+
         <div class="text-page__row">
             <aside class="text-page__aside">
                 <h3 class="text-page__aside-header">For Reviewers</h3>
                 <nav class="nav-text-page">
                     <ul class="nav-text-page__list">
-                        <li class="nav-text-page__item current"><a href="" class="nav-text-page__link">Guidelines for
-                                Reviewers</a></li>
+                        <li class="nav-text-page__item current"><a href="" class="nav-text-page__link">Guidelines for Reviewers</a></li>
                         <li class="nav-text-page__item"><a href="" class="nav-text-page__link">Privacy Policy</a></li>
                         <li class="nav-text-page__item"><a href="" class="nav-text-page__link">Terms and Conditions</a>
                         </li>
