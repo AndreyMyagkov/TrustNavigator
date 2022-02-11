@@ -9,12 +9,14 @@
 }
 
 .rate-header__logo {
-    flex: 0 0 100px;
+    flex: 0 0 80px;
 }
 
 .rate-header__img {
-    width: 100px;
+    width: 100%;
     height: 100%;
+    max-width: 100px;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
@@ -24,8 +26,8 @@
 
 .rate-header__header {
     font-weight: bold;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 20px;
+    line-height: 1.37em;
     margin-bottom: 10px;
 }
 
@@ -55,7 +57,7 @@
 
 .rate__star-selector {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .rate__external {
@@ -217,4 +219,16 @@ textarea.rate__textarea {
 .accept-confirm a {
     color: var(--blue-vivid);
     text-decoration: underline;
+}
+
+@media screen and (min-width: 768px){
+    .rate-header__header {
+        font-size: 30px;
+    }
+    .rate-header__logo {
+        flex: 0 0 100px;
+    }
+    .rate__star-selector {
+        font-size: 50px;
+    }
 }
