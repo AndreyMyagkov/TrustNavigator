@@ -115,6 +115,40 @@ a:hover {
     }
 }
 
+.container {
+    width: 100%;
+    padding-right: var(0.75rem);
+    padding-left: var(0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(100% - 24px);
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+/* .row>* {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+} */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1146px;
+    }
+}
+.align-items-center {
+    align-items: center;
+}
 
 .rounded {
     border-radius: 2px;
