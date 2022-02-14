@@ -2,7 +2,7 @@
     background: #fff;
 }
 .category-header__wr {
-    padding: 30px;
+    
 }
 .nav-back {
     font-size: 18px;
@@ -18,8 +18,8 @@
 
 .category-header__header {
     font-weight: bold;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 22px;
+    line-height: 1.37em;
     margin-bottom: 15px;
 }
 
@@ -118,11 +118,11 @@
 }
 
 .rewiews__logo {
-    flex: 0 1 140px;
-    max-width: 140px;
-    border-right: 1px dashed #999999;
+    flex: 0 1 100px;
+    max-width: 100px;
     display: grid;
     place-content: center;
+    padding: 0 5px;
 }
 
 .rewiews__img {
@@ -288,4 +288,36 @@
     font-size: 14px;
     line-height: 1.36em;
     color: #666;
+}
+.content-category {
+    background: transparent;
+}
+.aside-category {
+    display: none;
+    
+}
+
+@media screen and (min-width: 768px){
+    .category-header__header {
+        font-size: 30px;
+    }
+    .rewiews__logo {
+        flex: 0 1 140px;
+        max-width: 140px;
+        border-right: 1px dashed #999999;
+    }
+}
+@media screen and (min-width: 769px) {
+
+    .aside-category {
+        display: block;
+        order: 1;
+        background: #fff;
+        padding: 20px;
+        border-radius: 2px;
+    }
+    .content-category {
+        order: 2;
+        
+    }
 }

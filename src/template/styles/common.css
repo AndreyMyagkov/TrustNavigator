@@ -117,8 +117,8 @@ a:hover {
 
 .container {
     width: 100%;
-    padding-right: var(0.75rem);
-    padding-left: var(0.75rem);
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
     margin-right: auto;
     margin-left: auto;
     max-width: calc(100% - 24px);
