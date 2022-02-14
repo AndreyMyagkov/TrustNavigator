@@ -7,21 +7,25 @@
 .business-information__wr {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .business-information__summary {
     flex: 1 1%;
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .business-information__logo {
-    flex: 0 0 150px;
+    flex: 1 1 100%;
 }
 
 .business-information__logo-link {
     display: block;
+    max-width: 100px;
+    margin: 0 auto;
 }
 
 .business-information__img {
@@ -34,7 +38,7 @@
 }
 
 .business-information__header {
-    font-size: 30px;
+    font-size: 22px;
     line-height: 1.367em;
     margin-bottom: 10px;
 }
@@ -79,7 +83,7 @@
 }
 
 .business-information__badges {
-    flex: 0 0 31.4%;
+    flex: 1 1 100%;
 }
 
 .badge-website-link {
@@ -92,6 +96,7 @@
     color: var(--blue);
     text-align: center;
     display: block;
+    margin: 0 auto;
 }
 
 .badge-website-link:hover {
@@ -101,7 +106,7 @@
 .badge-website-link__icon {
     margin-bottom: 8px;
     font-size: 32px;
-    display: block;
+    display: none;
 }
 
 .badge-website-link__url {
@@ -113,10 +118,35 @@
 .badge-website-link__label {
     font-size: 14px;
     line-height: 1.7em;
-    display: block;
+    display: none;
 }
 
-
+@media screen and (min-width: 768px) {
+    .business-information__summary {
+        gap: 45px;
+    }
+    .business-information__logo {
+        flex: 0 0 150px;
+    }
+    .business-information__badges {
+        flex: 0 0 31.4%;
+    }
+    .badge-website-link__icon {
+        display: block;
+    }
+    .badge-website-link__label {
+        display: block;
+    }
+    .business-information__logo {
+        flex: 0 0 100px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .business-information__header {
+        font-size: 30px;
+    }
+    
+}
 
 
 .company-block {
@@ -128,10 +158,11 @@
 .write-review-widgete {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .write-review-widgete__user {
-    flex: 1 1 50%;
+    flex: 1 1 100%;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -166,16 +197,27 @@
 .star-selector {
     flex: 1 1 50%;
     font-size: 30px;
-    text-align: right;
+}
+.write-review-widgete__selector {
+    text-align: center;
+    display: none;
 }
 
-
+@media screen and (min-width: 768px) {
+    .write-review-widgete__user {
+        flex: 1 1 50%;
+    }
+    .write-review-widgete__selector {
+        text-align: right;
+        display: block;
+    }
+}
 
 
 .reviews-filter {}
 
 .reviews-filter__top {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -187,6 +229,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
+    margin-bottom: 12px;
 }
 
 .reviews-filter__count {
@@ -203,6 +246,7 @@
 .reviews-filter__button {
     margin-left: 15px;
     padding: 4px 14px;
+    margin-bottom: 5px;
 }
 
 .reviews-separator {
@@ -280,6 +324,14 @@
     color: #666;
 }
 
+@media screen and (min-width: 768px) { 
+    .reviews-filter__top {
+        display: flex;
+    }
+    .reviews-filter__header {
+        margin-bottom: 0;
+    }
+}
 
 .company-review__list {
 
@@ -325,6 +377,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .company-review-user__avatar {
@@ -400,6 +453,7 @@
     color: var(--blue);
     margin-bottom: 20px;
     border-bottom: 1px solid #C4C4C4;
+    flex-wrap: wrap;
 }
 
 
@@ -662,4 +716,15 @@
 
 .trust-about {}
 
-.u-content {}
+
+.aside-company {
+    display: none;
+}
+
+
+@media screen and (min-width: 769px) {
+
+    .aside-company {
+        display: block;
+    }
+}
