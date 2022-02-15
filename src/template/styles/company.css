@@ -396,7 +396,7 @@
 }
 
 .company-review-user__info {
-    flex: 1;
+    flex: 1 0 auto;
 }
 .company-review-user__info:hover {
     text-decoration: none;
@@ -718,13 +718,16 @@
 
 
 .aside-company {
-    display: none;
+    flex: 0 0 100%;
+}
+.content-company {
+    background-color: transparent;
 }
 
 
 @media screen and (min-width: 769px) {
 
     .aside-company {
-        display: block;
+        flex: 0 0 31.4%;
     }
 }
