@@ -75,6 +75,7 @@ textarea.rate__textarea {
     line-height: 22px;
     min-height: 200px;
     margin-bottom: 10px;
+    resize: vertical;
 }
 .rate-rewiew-title {
     position: relative;

@@ -27,23 +27,67 @@
         <form action="">
             <div class="company-block rate__top">
                 <h1 class="rate__label">Rate your recent experience</h1>
-                <div class="rate__star-selector">
-                    <div class="stars rating_50">
-                        <svg class="icon stars__star" width="20" height="20">
+
+                
+                <div class="star-selector-">
+
+                    <input id="star-25" type="radio" name="service" value="5">
+                    <label title="Отлично" for="star-25">
+                        <svg class="star-selector__star" width="20" height="20">
                             <use xlink:href="#star"></use>
                         </svg>
-                        <svg class="icon stars__star" width="20" height="20">
+                    </label>
+
+                    <input id="star-24" type="radio" name="service" value="4">
+                    <label title="Хорошо" for="star-24">
+                        <svg class="star-selector__star" width="20" height="20">
                             <use xlink:href="#star"></use>
                         </svg>
-                        <svg class="icon stars__star" width="20" height="20">
+                    </label>
+
+                    <input id="star-23" type="radio" name="service" value="3">
+                    <label title="Нормально" for="star-23">
+                        <svg class="star-selector__star" width="20" height="20">
                             <use xlink:href="#star"></use>
                         </svg>
-                        <svg class="icon stars__star" width="20" height="20">
+                    </label>
+
+                    <input id="star-22" type="radio" name="service" value="2">
+                    <label title="Плохо" for="star-22">
+                        <svg class="star-selector__star" width="20" height="20">
                             <use xlink:href="#star"></use>
                         </svg>
-                        <svg class="icon stars__star" width="20" height="20">
+                    </label>
+
+                    <input id="star-21" type="radio" name="service" value="1">
+                    <label title="Ужасно" for="star-21">
+                        <svg class="star-selector__star" width="20" height="20">
                             <use xlink:href="#star"></use>
                         </svg>
+                    </label>
+                </div>
+
+
+                <div class="rate__star-selector star-selector">
+                    
+                    <div class="stars5">
+                        <div class="star-selector__control">
+                            <input type="radio" name="rate" value="1" class="star-selector__radio">
+                            <input type="radio" name="rate" value="2" class="star-selector__radio">
+                            <input type="radio" name="rate" value="3" class="star-selector__radio">
+                            <input type="radio" name="rate" value="4" class="star-selector__radio">
+                            <input type="radio" name="rate" value="5" class="star-selector__radio">
+                        </div>
+                        <div class="stars5__bg">
+                            <svg class="stars5__star" width="116" height="20">
+                                <use xlink:href="#star5"></use>
+                            </svg>
+                        </div>
+                        <div class="stars5__fg">
+                            <svg class="stars5__star" width="116" height="20">
+                                <use xlink:href="#star5"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
