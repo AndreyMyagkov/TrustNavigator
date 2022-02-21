@@ -17,6 +17,7 @@ if (document.querySelector('.slider-category')) {
     perPage: 1,
     //rewind: true,
     pagination: false,
+    arrows: true,
     grid: {
         rows: 3,
         cols: 4,
@@ -32,13 +33,19 @@ if (document.querySelector('.slider-category')) {
                 rows: 4,
                 cols: 2,
             },
+            pagination: false,
+            arrows: true
         },
         600: {
             grid: {
                 rows: 4,
                 cols: 2,
+                
             },
+            pagination: true,
+            arrows: false
         },
+        
     },
 });
 categorySlider.mount(window.splide.Extensions);

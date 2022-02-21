@@ -57,7 +57,12 @@
 
 .rate__star-selector {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
+}
+@media screen and (min-width: 568px) {
+    .rate__star-selector {
+        font-size: 40px;
+    }
 }
 
 .rate__external {

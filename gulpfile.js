@@ -142,7 +142,7 @@ function styles() {
 
 		.pipe(rename({ basename: "style", suffix: '.min' }))
 		.pipe(sourcemaps.write('../css/'))
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		.pipe(dest('src/template/css'))
 		.pipe(browserSync.stream())
 }
@@ -220,6 +220,20 @@ async function buildhtml() {
 	del('dist/parts', { force: true })
 }
 
+
+function fonts() {
+	return src('src/template/fonts/**/*')
+		.pipe(newer('dist/template/fonts'))
+		.pipe(dest('dist/template/fonts'))
+}
+
+function svg() {
+	return src('src/template/svg/**/*')
+		.pipe(newer('dist/template/svg'))
+		.pipe(dest('dist/template/svg'))
+}
+
+
 function cleandist() {
 	return del('dist/**/*', { force: true })
 }
@@ -255,7 +269,7 @@ exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
 exports.assets = series(jsSimple, styles, images, imagesContent)
-exports.build = series(cleandist, jsSimple, styles, images, imagesContent, buildcopy, buildhtml)
+exports.build = series(cleandist, jsSimple, styles, images, imagesContent, buildcopy, buildhtml, fonts, svg)
 //exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
 
 exports.default = series(jsSimple, styles, images, imagesContent, parallel(browsersync, startwatch))
