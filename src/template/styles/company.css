@@ -333,8 +333,8 @@
     }
 }
 
-.company-review__list {
-
+.company-review__slider {
+    margin-bottom: 10px;
 }
 
 .company-review {
@@ -440,7 +440,7 @@
 .company-review__content-wr {
     border-bottom: 1px solid #C4C4C4;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+  
 }
 
 .company-review__buttons {
@@ -487,6 +487,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    padding: 5px 0 0 0;
 }
 
 .company-review__button {
@@ -506,9 +507,57 @@
 .company-review__button:hover {
     color: var(--blue-dark);
 }
+.company-review__morebtn {
+    background-color: #fff;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    margin: 0 auto;
+    color: var(--blue);
+    line-height: 1.357em;
+    font-size: 14px;
+}
+.company-review__morebtn .icon {
+    font-size: 16px;
+}
+.company-review__text_overflow {
+    --lines: 3;
+    position: relative;
+    max-height: calc(1.357em * var(--lines));
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:var(--lines);
+    -webkit-box-orient: vertical;
+}
+.company-review__text_overflow:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.357em;
+    background-color: rgba(255,255,255, 0.5);
+}
 
-.company-review__ {}
-
+.company-review__slider .splide__arrow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    width: 30px;
+    height: 50px;
+    opacity: 1;
+}
+.company-review__slider .splide__arrow--prev {
+    left: -5px;
+}
+.company-review__slider .splide__arrow--next {
+    right: -5px;
+}
+.company-review__slider .splide__arrow svg {
+    fill: var(--blue);
+}
 
 
 
@@ -570,7 +619,7 @@
 
 .accordion__header {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 1.375em;
     padding-right: 42px;
     position: relative;
     cursor: pointer;
@@ -590,6 +639,7 @@
 .accordion__content {
     line-height: 1.375em;
     display: none;
+    margin-top: 1em;
 }
 .accordion__item[open] .accordion__content {
     display: block;
@@ -648,6 +698,9 @@
 .company-locations__rating {
     flex: 0 0 110px;
     text-align: right;
+}
+.company-locations__stars {
+    font-size: 16px;
 }
 
 

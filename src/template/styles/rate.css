@@ -137,6 +137,7 @@ textarea.rate__textarea {
 }
 .rate-confirm {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .login-select {

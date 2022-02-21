@@ -12,7 +12,6 @@ mp.button({
 /**
  * Main: slider category
  */
-//FIXME:
 if (document.querySelector('.slider-category')) {
     const categorySlider = new Splide('.slider-category', {
     perPage: 1,
@@ -61,10 +60,6 @@ if (document.querySelector('.your-stories__slide')) {
             document.querySelector('.your-stories__slide .splide__arrow--prev').style.backgroundImage = `url(${prev})`
             document.querySelector('.your-stories__slide .splide__arrow--next').style.backgroundImage = `url(${next})`
         
-    
-        // console.log(yourStoriesSlide.Components.Slides.getAt(yourStoriesSlide.index).slide.querySelector('img').getAttribute('src'))
-        // document.querySelector('.your-stories__slide .splide__arrow--prev').style.backgroundImage = `url(${yourStoriesSlide.Components.Slides.getAt(prevIndex).slide.querySelector('img').getAttribute('src')})`
-        // document.querySelector('.your-stories__slide .splide__arrow--next').style.backgroundImage = `url(${yourStoriesSlide.Components.Slides.getAt(destIndex).slide.querySelector('img').getAttribute('src')})`
     });
     yourStoriesSlide.mount();
 }
@@ -90,60 +85,47 @@ if (document.querySelector('.js-categories-toggle-filter-panel')) {
     })
 }
 
-/**
- * Star secelcor
- */
-// [...document.querySelectorAll('.star-selector input')].forEach(_ => {
-//     _.addEventListener('mouseover', function(e) {
-//         console.log(e.target.value);
-//         console.log(e.target.parentElement.parentElement)
-//         e.target.parentElement.parentElement.classList.remove('rating_10', 'rating_20', 'rating_30', 'rating_40', 'rating_50');
-//         e.target.parentElement.parentElement.classList.add(`rating_${e.target.value * 10}`)
-        
-//     })
-// })
 
-class StarSelector {
-    constructor(selector) {
-        if (!selector) {
-            return
-        }
-        const root = document.querySelector(selector);
-        if (!root) {
-            return
-        }
-        this.root = root;
-        this.oldValue = 0;
-        this.hoverListener();
-        this.clickListener();
-        this.blurListener();
-    }
-    hoverListener() {
-        [...this.root.querySelectorAll('input')].forEach(_ => {
-            _.addEventListener('mouseover', e => {
-                this.setRating(e.target.value * 10)
-            })
-        })
-    }
-    clickListener() {
-        [...this.root.querySelectorAll('input')].forEach(_ => {
-            _.addEventListener('click', e => {
-                const rating = e.target.value * 10;
-                this.setRating(rating);
-                this.oldValue = rating;
-            })
-        })
-    }
-    blurListener() {
-        this.root.addEventListener('mouseleave', e => {
-            this.setRating(this.oldValue);
-        })
-    }
-    setRating(value) {
-        const stars5 = this.root.querySelector('.stars5');
-        stars5.classList.remove('rating_10', 'rating_20', 'rating_30', 'rating_40', 'rating_50');
-        stars5.classList.add(`rating_${value}`);
-    }
+
+const starSelector = new StarSelector('.star-selector');
+
+
+/**
+ * Company: reviews sliders
+ */
+
+if (document.querySelector('.js-company-review-slider')) {
+
+    [...document.querySelectorAll('.js-company-review-slider')].forEach(_ => {
+        const companySlider = new Splide(_, {
+            perPage: 1,
+            rewind: true,
+            pagination: false,
+    
+        });
+        companySlider.mount()
+    })
 }
 
-const starSelector = new StarSelector('.star-selector')
+[...document.querySelectorAll('.js-company-review__more')].forEach(_ => {
+    _.addEventListener('click', () => {
+        const textBlock = _.parentElement.parentElement.querySelector('.company-review__text_overflow');
+        textBlock.classList.remove('company-review__text_overflow');
+        //_.parentElement.parentElement.querySelector('.company-review__text_overflow').style.setProperty('--lines', 'auto');
+        _.remove();
+    })
+});
+
+/**
+ * Tooltips
+ */
+[...document.querySelectorAll('.tippy')].forEach(_ => {
+    // tippy(_, {
+    //     content: _.getAttribute('data-tippy-content'),
+    // });
+    tippy('[data-tippy-content]', {
+        allowHTML: true,
+        interactive: true,
+        placement: 'top',
+    });
+})

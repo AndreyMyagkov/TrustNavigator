@@ -1,6 +1,6 @@
 <!--#set var="title" value="DogWatch Hidden Fences" -->
 <!--#include virtual="/parts/header.html" -->
-    
+
 <main class="main">
     <!-- category-header -->
     <div class="page-top">
@@ -38,7 +38,7 @@
 
                                 <div class="business-information__value">
                                     <span>4.9</span>
-                                     <svg class="icon" width="14" height="14">
+                                     <svg class="icon  tippy" width="14" height="14" data-tippy-content="Lorem <b>ipsum</b> dolor">
                                          <use xlink:href="#info-circle"></use>
                                      </svg>
                                 </div>
@@ -84,7 +84,7 @@
             <section class="content content-company">
 
                 <!-- write-review-widgete -->
-                <div class="company-block write-review-widgete">
+                <div class="card write-review-widgete">
                     <div class="write-review-widgete__user">
                         <div class="write-review-widgete__ava">
                             <img src="template/svg/icons/user.svg" alt="" class="write-review-widgete__img">
@@ -93,8 +93,17 @@
                             <a href="" class="write-review-widgete__link">Write a review</a>
                         </div>
                     </div>
-                    <div class="write-review-widgete__selector star-selector">
+
+                    <form class="write-review-widgete__selector star-selector" action="#">
+
                         <div class="stars5">
+                            <div class="star-selector__control">
+                                <input type="radio" name="rate" value="1" class="star-selector__radio">
+                                <input type="radio" name="rate" value="2" class="star-selector__radio">
+                                <input type="radio" name="rate" value="3" class="star-selector__radio">
+                                <input type="radio" name="rate" value="4" class="star-selector__radio">
+                                <input type="radio" name="rate" value="5" class="star-selector__radio">
+                            </div>
                             <div class="stars5__bg">
                                 <svg class="stars5__star" width="116" height="20">
                                     <use xlink:href="#star5"></use>
@@ -106,13 +115,14 @@
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
                 </div>
                 <!-- /write-review-widgete -->
 
 
                 <!-- reviews-filter -->
-                <div class="company-block">
+                <div class="card">
                     <div class="reviews-filter">
                         <div class="reviews-filter__top">
                             <h2 class="reviews-filter__header">
@@ -296,133 +306,481 @@
                 <!-- /reviews-filter -->
 
 
-                <!-- company-review -->
-                <div class="company-review__list">
-                    <div class="company-review rating_50">
-                        
-                        <aside class="company-review__info">
-                            <div class="company-review-user">
-                                <div class="company-review-user__avatar">
-                                    <img alt="Alexander K."
-                                        src="https://user-images.trustpilot.com/52fb58800000640001638787/73x73.png"
-                                        class="company-review-user__img" width="40" height="40"
-                                        >
+                <!-- company-review slider -->
+                <div class="company-review__slider splide js-company-review-slider">
+
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="company-review rating_50 splide__slide">
+                                
+                                <aside class="company-review__info">
+                                    <div class="company-review-user">
+                                        <div class="company-review-user__avatar">
+                                            <img alt="Alexander K."
+                                                src="https://user-images.trustpilot.com/52fb58800000640001638787/73x73.png"
+                                                class="company-review-user__img" width="40" height="40"
+                                                >
+                                        </div>
+
+                                        <a href="" class="company-review-user__info">
+                                            <div class="company-review-user__name">Alexander K.</div>
+                                            <div class="company-review-user__details">
+                                                <div class="company-review-user__reviews">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#pencil"></use>
+                                                    </svg>
+                                                    <span class="">1 review</span>
+                                                </div>
+                                                <div class="company-review-user__location">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#location"></use>
+                                                    </svg>
+                                                    <span class="">DE</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="stars5 rating_50 company-review-user__stars">
+                                            <div class="stars5__bg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="stars5__fg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </aside>
+
+                                <div class="company-review__buttons">
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14"
+                                            height="14">
+                                            <use xlink:href="#merged"></use>
+                                        </svg>
+                                        <span>Merged</span>
+                                    </div>
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14"
+                                            height="14">
+                                            <use xlink:href="#checked-inversed"></use>
+                                        </svg>
+                                        <span>Invited</span>
+                                    </div>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14"
+                                            height="14">
+                                            <use xlink:href="#like"></use>
+                                        </svg>
+                                        <span>Userful</span>
+                                    </button>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14"
+                                            height="14">
+                                            <use xlink:href="#share"></use>
+                                        </svg>
+                                        <span>Share</span>
+                                    </button>
+
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14"
+                                            height="14">
+                                            <use xlink:href="#flag"></use>
+                                        </svg>
+
+                                    </button>
+
+
+                                    <div class="company-review__date">
+                                        <time title="Sonntag, 30. Januar 2022, 15:03:50"
+                                            datetime="2022-01-30T15:03:50.000Z" class="">Jan 5, 2022</time>
+                                    </div>
+
                                 </div>
 
-                                <a href="" class="company-review-user__info">
-                                    <div class="company-review-user__name">Alexander K.</div>
-                                    <div class="company-review-user__details">
-                                        <div class="company-review-user__reviews">
-                                            <svg class="icon company-review-user__icon" width="14" height="14">
-                                                <use xlink:href="#pencil"></use>
-                                            </svg>
-                                            <span class="">1 review</span>
-                                        </div>
-                                        <div class="company-review-user__location">
-                                            <svg class="icon company-review-user__icon" width="14" height="14">
-                                                <use xlink:href="#location"></use>
-                                            </svg>
-                                            <span class="">DE</span>
-                                        </div>
-                                    </div>
-                                </a>
+                                <section class="company-review__content-wr">
 
-                                <div class="stars5 rating_50 company-review-user__stars">
-                                    <div class="stars5__bg">
-                                        <svg class="stars5__star" width="116" height="20">
-                                            <use xlink:href="#star5"></use>
-                                        </svg>
+                                    
+                                    <div class="company-review__content">
+                                        <h2 class="company-review__header">
+                                            <a href="" class="">Super Bank einfach schnell und…</a>
+                                        </h2>
+                                        <div class="company-review__text company-review__text_overflow">
+                                        <p class="">Fantastic customer service! Our fence was installed just 4 days after our
+                                            first call out to DogWatch, and the fears of our dogs being the hellions of the
+                                            neighborhood are OVER! Ed helped us with the training of our dogs and was very
+                                            responsive for follow-up. Our Australian Shepherds are calmer and happier now that
+                                            they have the run of the whole yard frequently through out the day. Thank you so
+                                            much Ed for restoring the peace in our home!!!</p>
+                                        </div>
                                     </div>
-                                    <div class="stars5__fg">
-                                        <svg class="stars5__star" width="116" height="20">
-                                            <use xlink:href="#star5"></use>
+
+                                </section>
+
+                                
+                                <div class="company-review__actions">
+                                    <button class="company-review__morebtn btn-icon js-company-review__more">
+                                        Show full review
+                                        <svg class="icon company-review-user__icon" width="16" height="16">
+                                            <use xlink:href="#arrow-down"></use>
                                         </svg>
+                                    </button>
+                                </div>
+                                
+                            </div>
+
+                            <div class="company-review rating_50 splide__slide">
+
+                                <aside class="company-review__info">
+                                    <div class="company-review-user">
+                                        <div class="company-review-user__avatar">
+                                            <img alt="Alexander K." src="https://user-images.trustpilot.com/52fb58800000640001638787/73x73.png" class="company-review-user__img" width="40" height="40">
+                                        </div>
+
+                                        <a href="" class="company-review-user__info">
+                                            <div class="company-review-user__name">Petr A.</div>
+                                            <div class="company-review-user__details">
+                                                <div class="company-review-user__reviews">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#pencil"></use>
+                                                    </svg>
+                                                    <span class="">2 review</span>
+                                                </div>
+                                                <div class="company-review-user__location">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#location"></use>
+                                                    </svg>
+                                                    <span class="">DE</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="stars5 rating_50 company-review-user__stars">
+                                            <div class="stars5__bg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="stars5__fg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
                                     </div>
+                                </aside>
+
+                                <div class="company-review__buttons">
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#merged"></use>
+                                        </svg>
+                                        <span>Merged</span>
+                                    </div>
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#checked-inversed"></use>
+                                        </svg>
+                                        <span>Invited</span>
+                                    </div>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#like"></use>
+                                        </svg>
+                                        <span>Userful</span>
+                                    </button>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#share"></use>
+                                        </svg>
+                                        <span>Share</span>
+                                    </button>
+
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#flag"></use>
+                                        </svg>
+
+                                    </button>
+
+
+                                    <div class="company-review__date">
+                                        <time title="Sonntag, 30. Januar 2022, 15:03:50" datetime="2022-01-30T15:03:50.000Z" class="">Jan 5, 2022</time>
+                                    </div>
+
+                                </div>
+
+                                <section class="company-review__content-wr">
+
+
+                                    <div class="company-review__content">
+                                        <h2 class="company-review__header">
+                                            <a href="" class="">Lorem ipsum dolor sit amet consectetur</a>
+                                        </h2>
+                                        <div class="company-review__text company-review__text_overflow">
+                                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto minima saepe numquam voluptatum molestiae. Sit placeat odit, dicta corporis minima, ducimus praesentium fuga eos ullam aliquid molestias quibusdam aliquam. Similique optio ut alias laborum accusantium libero? Veritatis porro sunt expedita fugit nihil maiores, autem itaque, neque, atque est cum dolor.</p>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+
+                                <div class="company-review__actions">
+                                    <button class="company-review__morebtn btn-icon js-company-review__more">
+                                        Show full review
+                                        <svg class="icon company-review-user__icon" width="16" height="16">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </button>
                                 </div>
 
                             </div>
-                        </aside>
-
-                        <div class="company-review__buttons">
-
-                            <div class="company-review__label">
-                                <svg class="icon company-review-user__icon" width="14"
-                                    height="14">
-                                    <use xlink:href="#merged"></use>
-                                </svg>
-                                <span>Merged</span>
-                            </div>
-
-                            <div class="company-review__label">
-                                <svg class="icon company-review-user__icon" width="14"
-                                    height="14">
-                                    <use xlink:href="#checked-inversed"></use>
-                                </svg>
-                                <span>Invited</span>
-                            </div>
-
-                            <button class="btn-link company-review__button">
-                                <svg class="icon company-review-user__icon" width="14"
-                                    height="14">
-                                    <use xlink:href="#like"></use>
-                                </svg>
-                                <span>Userful</span>
-                            </button>
-
-                            <button class="btn-link company-review__button">
-                                <svg class="icon company-review-user__icon" width="14"
-                                    height="14">
-                                    <use xlink:href="#share"></use>
-                                </svg>
-                                <span>Share</span>
-                            </button>
-
-
-                            <button class="btn-link company-review__button">
-                                <svg class="icon company-review-user__icon" width="14"
-                                    height="14">
-                                    <use xlink:href="#flag"></use>
-                                </svg>
-
-                            </button>
-
-
-                            <div class="company-review__date">
-                                <time title="Sonntag, 30. Januar 2022, 15:03:50"
-                                    datetime="2022-01-30T15:03:50.000Z" class="">Jan 5, 2022</time>
-                            </div>
-
                         </div>
-
-                        <section class="company-review__content-wr">
-
-                            
-                            <div class="company-review__content">
-                                <h2 class="company-review__header">
-                                    <a href="" class="">Super Bank einfach schnell und…</a>
-                                </h2>
-                                <p class="">Fantastic customer service! Our fence was installed just 4 days after our
-                                    first call out to DogWatch, and the fears of our dogs being the hellions of the
-                                    neighborhood are OVER! Ed helped us with the training of our dogs and was very
-                                    responsive for follow-up. Our Australian Shepherds are calmer and happier now that
-                                    they have the run of the whole yard frequently through out the day. Thank you so
-                                    much Ed for restoring the peace in our home!!!</p>
-                            </div>
-
-                        </section>
-
-                        
-                        <div class="company-review__actions">
-                            
-                        </div>
-                        
                     </div>
                 </div>
-                <!-- /company-review -->
+                <!-- /company-review slider-->
 
-                <div class="company-block">
-                    <!--#include virtual="/parts/pagination.html" -->
+                <!-- company-review slider -->
+                <div class="company-review__slider splide js-company-review-slider">
+
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="company-review rating_30 splide__slide">
+
+                                <aside class="company-review__info">
+                                    <div class="company-review-user">
+                                        <div class="company-review-user__avatar">
+                                            <img alt="Alexander K." src="https://user-images.trustpilot.com/52fb58800000640001638787/73x73.png" class="company-review-user__img" width="40" height="40">
+                                        </div>
+
+                                        <a href="" class="company-review-user__info">
+                                            <div class="company-review-user__name">Alexander K.</div>
+                                            <div class="company-review-user__details">
+                                                <div class="company-review-user__reviews">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#pencil"></use>
+                                                    </svg>
+                                                    <span class="">1 review</span>
+                                                </div>
+                                                <div class="company-review-user__location">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#location"></use>
+                                                    </svg>
+                                                    <span class="">DE</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="stars5 rating_30 company-review-user__stars">
+                                            <div class="stars5__bg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="stars5__fg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </aside>
+
+                                <div class="company-review__buttons">
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#merged"></use>
+                                        </svg>
+                                        <span>Merged</span>
+                                    </div>
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#checked-inversed"></use>
+                                        </svg>
+                                        <span>Invited</span>
+                                    </div>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#like"></use>
+                                        </svg>
+                                        <span>Userful</span>
+                                    </button>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#share"></use>
+                                        </svg>
+                                        <span>Share</span>
+                                    </button>
+
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#flag"></use>
+                                        </svg>
+
+                                    </button>
+
+
+                                    <div class="company-review__date">
+                                        <time title="Sonntag, 30. Januar 2022, 15:03:50" datetime="2022-01-30T15:03:50.000Z" class="">Jan 5, 2022</time>
+                                    </div>
+
+                                </div>
+
+                                <section class="company-review__content-wr">
+
+
+                                    <div class="company-review__content">
+                                        <h2 class="company-review__header">
+                                            <a href="" class="">Super Bank einfach schnell und…</a>
+                                        </h2>
+                                        <p class="">Fantastic customer service! Our fence was installed just 4 days after our
+                                            first call out to DogWatch, and the fears of our dogs being the hellions of the
+                                            neighborhood are OVER! Ed helped us with the training of our dogs and was very
+                                            responsive for follow-up. Our Australian Shepherds are calmer and happier now that
+                                            they have the run of the whole yard frequently through out the day. Thank you so
+                                            much Ed for restoring the peace in our home!!!</p>
+                                    </div>
+
+                                </section>
+
+
+                                <div class="company-review__actions">
+
+                                </div>
+
+                            </div>
+
+                            <div class="company-review rating_30 splide__slide">
+
+                                <aside class="company-review__info">
+                                    <div class="company-review-user">
+                                        <div class="company-review-user__avatar">
+                                            <img alt="Alexander K." src="https://user-images.trustpilot.com/52fb58800000640001638787/73x73.png" class="company-review-user__img" width="40" height="40">
+                                        </div>
+
+                                        <a href="" class="company-review-user__info">
+                                            <div class="company-review-user__name">Petr A.</div>
+                                            <div class="company-review-user__details">
+                                                <div class="company-review-user__reviews">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#pencil"></use>
+                                                    </svg>
+                                                    <span class="">2 review</span>
+                                                </div>
+                                                <div class="company-review-user__location">
+                                                    <svg class="icon company-review-user__icon" width="14" height="14">
+                                                        <use xlink:href="#location"></use>
+                                                    </svg>
+                                                    <span class="">DE</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="stars5 rating_30 company-review-user__stars">
+                                            <div class="stars5__bg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="stars5__fg">
+                                                <svg class="stars5__star" width="116" height="20">
+                                                    <use xlink:href="#star5"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </aside>
+
+                                <div class="company-review__buttons">
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#merged"></use>
+                                        </svg>
+                                        <span>Merged</span>
+                                    </div>
+
+                                    <div class="company-review__label">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#checked-inversed"></use>
+                                        </svg>
+                                        <span>Invited</span>
+                                    </div>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#like"></use>
+                                        </svg>
+                                        <span>Userful</span>
+                                    </button>
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#share"></use>
+                                        </svg>
+                                        <span>Share</span>
+                                    </button>
+
+
+                                    <button class="btn-link company-review__button">
+                                        <svg class="icon company-review-user__icon" width="14" height="14">
+                                            <use xlink:href="#flag"></use>
+                                        </svg>
+
+                                    </button>
+
+
+                                    <div class="company-review__date">
+                                        <time title="Sonntag, 30. Januar 2022, 15:03:50" datetime="2022-01-30T15:03:50.000Z" class="">Jan 5, 2022</time>
+                                    </div>
+
+                                </div>
+
+                                <section class="company-review__content-wr">
+
+
+                                    <div class="company-review__content">
+                                        <h2 class="company-review__header">
+                                            <a href="" class="">Lorem ipsum dolor sit amet consectetur</a>
+                                        </h2>
+                                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto minima saepe numquam voluptatum molestiae. Sit placeat odit, dicta corporis minima, ducimus praesentium fuga eos ullam aliquid molestias quibusdam aliquam. Similique optio ut alias laborum accusantium libero? Veritatis porro sunt expedita fugit nihil maiores, autem itaque, neque, atque est cum dolor.</p>
+                                    </div>
+
+                                </section>
+
+
+                                <div class="company-review__actions">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- /company-review slider-->
+
 
             </section>
 
@@ -441,7 +799,7 @@
 
                             <p class="">
                                 Trustpilot-Profil beansprucht: August 2020.&nbsp;
-                                <span class="tooltip__wr">
+                                <span class="tooltip__wr" data-tippy-content="Lorem <b>ipsum</b> dolor">
                                     <span>
                                         <svg class="transparency__icon icon" width="14" height="14">
                                             <use xlink:href="#info-circle"></use>
@@ -457,7 +815,7 @@
                             </svg>
                             <p class="">
                                 Verified additional company details&nbsp;
-                                <span class="tooltip__wr">
+                                <span class="tooltip__wr" data-tippy-content="Lorem <b>ipsum</b> dolor">
                                     <span>
                                         <svg class="icon" width="14" height="14">
                                             <use xlink:href="#info-circle"></use>
@@ -474,8 +832,8 @@
 
                     
                     <div class="accordion">
-                        <div class="accordion__item">
-                            <div class="accordion__header">
+                        <details class="accordion__item">
+                            <summary class="accordion__header">
                                 <span class="accordion__header-text">Asks their customers for reviews — whether positive
                                     or negative.</span>
                                 <div class="accordion__icon">
@@ -483,30 +841,30 @@
                                         <use xlink:href="#arrow-down"></use>
                                     </svg>
                                 </div>
-                            </div>
+                            </summary>
                             <div class="accordion__content">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus necessitatibus harum ea placeat, nobis qui in. Saepe qui debitis nulla obcaecati et perferendis! Soluta fuga consequuntur beatae suscipit maiores.
                             </div>
-                        </div>
+                        </details>
 
-                        <div class="accordion__item">
-                            <div class="accordion__header">
+                        <details class="accordion__item">
+                            <summary class="accordion__header">
                                 <span class="accordion__header-text">Pays to access extra Trustpilot features.</span>
                                 <div class="accordion__icon">
                                     <svg class="icon" width="14" height="14">
                                         <use xlink:href="#arrow-down"></use>
                                     </svg>
                                 </div>
-                            </div>
+                            </summary>
                             <div class="accordion__content">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus necessitatibus
                                 harum ea placeat, nobis qui in. Saepe qui debitis nulla obcaecati et perferendis! Soluta
                                 fuga consequuntur beatae suscipit maiores.
                             </div>
-                        </div>
+                        </details>
 
-                        <div class="accordion__item">
-                            <div class="accordion__header">
+                        <details class="accordion__item">
+                            <summary class="accordion__header">
                                 <span class="accordion__header-text">Typically replies to negative reviews in 2 days or
                                     less.</span>
                                 <div class="accordion__icon">
@@ -514,29 +872,29 @@
                                         <use xlink:href="#arrow-down"></use>
                                     </svg>
                                 </div>
-                            </div>
+                            </summary>
                             <div class="accordion__content">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus necessitatibus
                                 harum ea placeat, nobis qui in. Saepe qui debitis nulla obcaecati et perferendis! Soluta
                                 fuga consequuntur beatae suscipit maiores.
                             </div>
-                        </div>
+                        </details>
 
-                        <div class="accordion__item">
-                            <div class="accordion__header">
+                        <details class="accordion__item">
+                            <summary class="accordion__header">
                                 <span class="accordion__header-text">Has replied to 2 out of 2 negative reviews.</span>
                                 <div class="accordion__icon">
                                     <svg class="icon" width="14" height="14">
                                         <use xlink:href="#arrow-down"></use>
                                     </svg>
                                 </div>
-                            </div>
+                            </summary>
                             <div class="accordion__content">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus necessitatibus
                                 harum ea placeat, nobis qui in. Saepe qui debitis nulla obcaecati et perferendis! Soluta
                                 fuga consequuntur beatae suscipit maiores.
                             </div>
-                        </div>
+                        </details>
                     </div>
 
                     <div class="transparency__button-wr">
@@ -557,22 +915,17 @@
                                 <div class="company-locations__address">Rose Business Park, Unit T, SL7 3N...</div>
                             </div>
                             <div class="company-locations__rating">
-                                <div class="company-locations__stars stars rating_50">
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
+                                <div class="stars5 rating_50 company-locations__stars">
+                                    <div class="stars5__bg">
+                                        <svg class="stars5__star" width="116" height="20">
+                                            <use xlink:href="#star5"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stars5__fg">
+                                        <svg class="stars5__star" width="116" height="20">
+                                            <use xlink:href="#star5"></use>
+                                        </svg>
+                                    </div>
                                 </div>
 
                                 <div class="company-locations__reviews">197 reviews</div>
@@ -586,25 +939,20 @@
                                     T, SL7 3N...</div>
                             </div>
                             <div class="company-locations__rating">
-                                <div class="company-locations__stars stars rating_50">
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <svg class="icon stars__star" width="16" height="16">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
+                                <div class="stars5 rating_30 company-locations__stars">
+                                    <div class="stars5__bg">
+                                        <svg class="stars5__star" width="116" height="20">
+                                            <use xlink:href="#star5"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stars5__fg">
+                                        <svg class="stars5__star" width="116" height="20">
+                                            <use xlink:href="#star5"></use>
+                                        </svg>
+                                    </div>
                                 </div>
 
-                                <div class="company-locations__reviews">197 reviews</div>
+                                <div class="company-locations__reviews">17 reviews</div>
                             </div>
                         </div>
 
@@ -667,7 +1015,7 @@
 
                     <div class="aside-block__h3 btn-icon">
                         Categories 
-                        <svg class="icon" width="14" height="14">
+                        <svg class="icon" width="14" height="14" data-tippy-content="Lorem <b>ipsum</b> dolor">
                             <use xlink:href="#info-circle"></use>
                         </svg>
                     </div>

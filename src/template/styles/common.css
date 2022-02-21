@@ -609,6 +609,7 @@ div.star-selector label:nth-of-type(5):hover~label svg {
     opacity: 0.9;
     border-radius: 2px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
