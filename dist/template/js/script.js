@@ -126,7 +126,7 @@ if (document.querySelector('.js-company-review-slider')) {
 /**
  * Tooltips
  */
-[...document.querySelectorAll('.tippy')].forEach(_ => {
+[...document.querySelectorAll('.tippy, [data-tippy-content]')].forEach(_ => {
     // tippy(_, {
     //     content: _.getAttribute('data-tippy-content'),
     // });
@@ -134,5 +134,46 @@ if (document.querySelector('.js-company-review-slider')) {
         allowHTML: true,
         interactive: true,
         placement: 'top',
+        theme: 'light',
     });
-})
+});
+
+/**
+ * Transparency
+ */
+[...document.querySelectorAll('.js-anchors [data-anchor]')].forEach(_ => {
+        
+    _.addEventListener('click', () => {
+        const targetId = _.getAttribute('data-anchor');
+        const targetElement = document.querySelector(`#${targetId}`);
+        document.querySelector('.js-anchors .anchors__item_active[data-anchor]').classList.remove('anchors__item_active');
+        _.classList.add('anchors__item_active');
+        
+        targetElement && targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    })
+    return false
+});
+
+/* sticky */
+stickyNav = function (navbar, minWidth) {
+    navbar = document.querySelector(navbar);
+    sticky = navbar.offsetTop;
+    minWidth = minWidth ? minWidth : 768;
+
+    function onScroll() {
+        if (sticky == 0) { sticky = navbar.offsetTop }
+        windowWinth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        if ((window.pageYOffset >= sticky) && (windowWinth > minWidth)) {
+
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    document.addEventListener('scroll', onScroll);
+}
+stickyNav('.transparency-sticky', 769);

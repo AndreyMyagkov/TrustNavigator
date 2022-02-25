@@ -91,7 +91,7 @@
         padding-top: 30px;
     }
     .committed-to-transparency {
-        background: url(../img/bg-user__commited.jpg) center center no-repeat;
+        background: #fff url(../img/bg-user__commited.jpg) right center no-repeat;
     }
     .committed-to-transparency {
         display: flex;

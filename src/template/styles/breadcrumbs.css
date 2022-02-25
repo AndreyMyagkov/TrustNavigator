@@ -1,6 +1,6 @@
 /* BreadCrumbs */
-.nav-breadcrumbs {
-    margin-bottom: 25px;
+.nav-breadcrumbs + * {
+    margin-top: 25px;
 }
 
 .breadcrumb li {

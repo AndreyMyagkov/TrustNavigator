@@ -98,6 +98,11 @@ a:hover {
     fill: currentColor;
     /* margin-right: 10px; */
 }
+.icon.star-outlined {
+    fill: none;
+    stroke-width: 1;
+    stroke: currentColor;
+}
 
 .main  {
     flex: 1 1 auto;
@@ -404,14 +409,36 @@ img.float-right {
     margin: 0 auto;
     padding: 0 12px;
 }
+
+.divider {
+    display: block;
+    height: 1px;
+    background-color: #c4c4c4;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
 .card {
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.9);
     opacity: 0.9;
     border-radius: 2px;
     padding: 20px;
     margin-bottom: 20px;
 }
-
+.card__header {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.333em;
+    margin-bottom: 10px;
+}
+.card__subheader {
+    font-size: 14px;
+    line-height: 1.357em;
+    color: #666666;
+    margin-bottom: 35px;
+}
 @media screen and (min-width: 768px) {
     .display-desctop {
         display: block;
@@ -470,4 +497,9 @@ img.float-right {
 
 .accordion__item[open] .accordion__icon {
     transform: rotate(180deg);
+}
+
+.tippy-box a {
+    color: #fff;
+    text-decoration: underline;
 }
