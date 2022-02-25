@@ -3923,6 +3923,9 @@ textarea.rate__textarea {
 .transparency-basic__icon-wr {
     margin-right: 10px;
 }
+.transparency-basic__icon-wr + * {
+    flex: 1 0 auto;
+}
 .transparency-basic__icon-end {
     margin-left: 20px;
 }
@@ -3947,7 +3950,7 @@ textarea.rate__textarea {
 }
 .transparency-basic .icon {
     font-size: 14px;
-    flex: 0 0 16px;
+    width: 16px;
 }
 
 
